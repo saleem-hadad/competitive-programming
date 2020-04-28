@@ -3,10 +3,7 @@
 import sys
 
 def bonAppetit(n, k, b, ar):
-    if ((sum(ar) - ar[k])/2)  == b:
-        return "Bon Appetit"
-    else:
-        return b - ((sum(ar) - ar[k])/2)
+    print('Bon Appetit' if (((sum(ar)-ar[k])/2 == b))else (int(b-((sum(ar)-ar[k])/2))))
 
 n, k = raw_input().strip().split(' ')
 n, k = [int(n), int(k)]
