@@ -26,6 +26,7 @@ function getBracketType(bracketsTypesMapping, char) {
   return null
 }
 
+// O(n) time | O(n) space
 function balancedBrackets(string) {
   let stack = new Stack()
   let bracketsTypesMapping = { '}': '{', ']': '[', ')': '(' }
