@@ -6,13 +6,24 @@ class Node {
     }
 
     depthFirstTraversal() {
+        console.log(this.value);
         if(this.left) {
             this.left.depthFirstTraversal();
         }
-        console.log(this.value);
         if(this.right) {
             this.right.depthFirstTraversal();
         }
+    }
+
+    swap() {
+        if(this.left) this.left.swap();
+        if(this.right) this.right.swap();
+
+        let temp = this.left;
+        this.left = this.right;
+        this.right = temp;
+
+        return this;
     }
 
     contains(value) {
@@ -43,7 +54,7 @@ b.left = d;
 b.right = e;
 
 
-a.depthFirstTraversal();
+a.swap().depthFirstTraversal();
 
 // console.log(a.contains('f'));
 // console.log(a.contains('z'));
