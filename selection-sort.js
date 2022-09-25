@@ -1,6 +1,5 @@
 function selectionSort(array) {
   for (let index = 0; index < array.length; index++) {
-    let minItemValue = Number.POSITIVE_INFINITY
     let minItemIndex = index
     for (let j = index + 1; j < array.length; j++) {
       if (array[j] < array[minItemIndex]) {
