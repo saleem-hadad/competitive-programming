@@ -1,1 +1,1 @@
-# My solutions to Hackerrank and AlgoExpert challenges.
+# My solutions to Hackerrank, Codeforces, and AlgoExpert challenges.
