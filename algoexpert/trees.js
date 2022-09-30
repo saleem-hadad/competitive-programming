@@ -138,13 +138,6 @@ _41.right = _1;
 _11.left = _4;
 _11.right = _2;
 
-/*
-     3
-    /  \
-   11  4
-   / \ \
-  4  2  1
-*/
 
 // console.log(sum(_3));
 // console.log(getSmallest(_3));
