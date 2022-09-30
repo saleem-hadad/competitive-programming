@@ -36,7 +36,7 @@ class Node {
             }else {
                 tail.next = current1;
                 current1 = current1.next;
-            }
+            }   
     
             tail = tail.next;
             toggle = !toggle;

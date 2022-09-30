@@ -15,4 +15,4 @@ const permutations = (elements) => {
     return permutationsWithLast;
 }
 
-console.log(permutations(['a', 'b', 'c']))
+console.log(permutations(['a', 'b', 'c', 'e']))
