@@ -127,8 +127,9 @@ function getBiggest(root) {
 }
 
 function getMaxRootToLeaf(root) {
-    if(!root) return -Infinity;
-    return root.value + Math.max(0, getMaxRootToLeaf(root.left), getMaxRootToLeaf(root.right))
+    if(!root) return -Infinity
+    if(!root.left && !root.right) return root.val
+    return root.val + Math.max(getMaxRootToLeaf(root.left), getMaxRootToLeaf(root.right))
 }
 
 let _3 = new Node(3);
