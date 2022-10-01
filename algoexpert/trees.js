@@ -5,26 +5,26 @@ class Node {
         this.right = null;
     }
 
-    // depthFirstTraversal() {
-    //     console.log(this.value);
-    //     if(this.left) {
-    //         this.left.depthFirstTraversal();
-    //     }
-    //     if(this.right) {
-    //         this.right.depthFirstTraversal();
-    //     }
-    // }
-
     depthFirstTraversal() {
-        let stack = [ this ]
-
-        while(stack.length > 0) {
-            let current = stack.pop();
-            console.log(current.value);
-            if (current.right) stack.push(current.right)
-            if (current.left) stack.push(current.left)
+        if(this.left) {
+            this.left.depthFirstTraversal();
+        }
+        console.log(this.value);
+        if(this.right) {
+            this.right.depthFirstTraversal();
         }
     }
+
+    // depthFirstTraversal() {
+    //     let stack = [ this ]
+
+    //     while(stack.length > 0) {
+    //         let current = stack.pop();
+    //         console.log(current.value);
+    //         if (current.right) stack.push(current.right)
+    //         if (current.left) stack.push(current.left)
+    //     }
+    // }
 
     swap() {
         if(this.left) this.left.swap();
@@ -51,6 +51,12 @@ class Node {
     }
 }
 
+/**
+ *       a
+ *     b  c
+ *   d  e  f
+ */
+
 let a = new Node('a');
 let b = new Node('b');
 let d = new Node('d');
@@ -65,7 +71,7 @@ b.left = d;
 b.right = e;
 
 
-// a.depthFirstTraversal();
+a.depthFirstTraversal();
 
 // console.log(a.contains('f'));
 // console.log(a.contains('z'));
@@ -142,4 +148,4 @@ _11.right = _2;
 // console.log(sum(_3));
 // console.log(getSmallest(_3));
 // console.log(getBiggest(_3));
-console.log(getMaxRootToLeaf(_3))
+// console.log(getMaxRootToLeaf(_3))

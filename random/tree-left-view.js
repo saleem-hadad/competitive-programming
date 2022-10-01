@@ -26,12 +26,11 @@ let maxLevel = 0;
 const leftView = (root, level = 1) => {
     if(!root) return;
 
-    
     if(maxLevel < level) {
         console.log(root.value)
         maxLevel = level
     }
-
+    
     leftView(root.left, level + 1)
     leftView(root.right, level + 1)
 }
